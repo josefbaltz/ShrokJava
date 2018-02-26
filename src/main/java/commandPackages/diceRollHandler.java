@@ -2,8 +2,11 @@ package commandPackages;
 
 import sx.blah.discord.api.events.EventSubscriber;
 import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedEvent;
+import sx.blah.discord.util.RequestBuffer;
 
 import java.util.*;
+
+//TODO Allow any type of dice
 
 public class diceRollHandler {
     @EventSubscriber
@@ -31,39 +34,93 @@ public class diceRollHandler {
         } else if (args.size() >= 3) {
             coreUtils.sendMessage(event.getChannel(), "Too Many Arguments Received!");
             coreUtils.sendMessage(event.getChannel(), "    ```" + coreUtils.BOT_PREFIX + "roll {rolls 1-4} {dice}```");
+
         } else if (args.get(0).equals("1")){
-            randomorgCall(1, args, event);
+            RequestBuffer.request(() -> {
+                dieCall(1, args, event);
+            });
 
         } else if (args.get(0).equals("2")){
-            randomorgCall(2, args, event);
+            RequestBuffer.request(() -> {
+                dieCall(2, args, event);
+            });
 
         } else if (args.get(0).equals("3")){
-            randomorgCall(3, args, event);
+            RequestBuffer.request(() -> {
+                dieCall(3, args, event);
+            });
 
         } else if (args.get(0).equals("4")){
-            randomorgCall(4, args, event);
+            RequestBuffer.request(() -> {
+                dieCall(4, args, event);
+            });
 
-        } else { coreUtils.sendMessage(event.getChannel(), "```[Unknown Error]```"); }
+        } else if (!args.get(0).equals("1") && !args.get(0).equals("2") && !args.get(0).equals("3") && !args.get(0).equals("4")){
+            coreUtils.sendMessage(event.getChannel(), "Roll Count Error!");
+            coreUtils.sendMessage(event.getChannel(), "    ```Maximum is 4 AND Must be a Number```");
+        } else { coreUtils.sendMessage(event.getChannel(), "```Unknown Error```"); }
     }
-    private void randomorgCall(int i, List<String> args, MessageReceivedEvent event){
+    private void dieCall(int i, List<String> args, MessageReceivedEvent event){
         switch (args.get(1)) {
             case "d2":
-                coreUtils.sendMessage(event.getChannel(), "d2 Received");
+                for (int x = 0; x <= Integer.parseInt(args.get(0))-1; x++) {
+                    coreUtils.sendMessage(event.getChannel(), "```" +
+                            event.getAuthor().getDisplayName(event.getGuild()) + " rolled a " +
+                            randomService.randomNumber(2) + "```");
+                }
+                break;
             case "d4":
-                coreUtils.sendMessage(event.getChannel(), "d4 Received");
+                for (int x = 0; x <= Integer.parseInt(args.get(0))-1; x++) {
+                    coreUtils.sendMessage(event.getChannel(), "```" +
+                            event.getAuthor().getDisplayName(event.getGuild()) + " rolled a " +
+                            randomService.randomNumber(4) + "```");
+                }
+                break;
             case "d6":
-                coreUtils.sendMessage(event.getChannel(), "d6 Received");
+                for (int x = 0; x <= Integer.parseInt(args.get(0))-1; x++) {
+                    coreUtils.sendMessage(event.getChannel(), "```" +
+                            event.getAuthor().getDisplayName(event.getGuild()) + " rolled a " +
+                            randomService.randomNumber(6) + "```");
+                }
+                break;
             case "d8":
-                coreUtils.sendMessage(event.getChannel(), "d8 Received");
+                    for (int x = 0; x <= Integer.parseInt(args.get(0))-1; x++) {
+                        coreUtils.sendMessage(event.getChannel(), "```" +
+                                event.getAuthor().getDisplayName(event.getGuild()) + " rolled a " +
+                                randomService.randomNumber(8) + "```");
+                    }
+                break;
             case "d10":
-                coreUtils.sendMessage(event.getChannel(), "d10 Received");
+                for (int x = 0; x <= Integer.parseInt(args.get(0))-1; x++) {
+                    coreUtils.sendMessage(event.getChannel(), "```" +
+                            event.getAuthor().getDisplayName(event.getGuild()) + " rolled a " +
+                            randomService.randomNumber(10) + "```");
+                }
+                break;
             case "d12":
-                coreUtils.sendMessage(event.getChannel(), "d12 Received");
+                for (int x = 0; x <= Integer.parseInt(args.get(0))-1; x++) {
+                    coreUtils.sendMessage(event.getChannel(), "```" +
+                            event.getAuthor().getDisplayName(event.getGuild()) + " rolled a " +
+                            randomService.randomNumber(12) + "```");
+                }
+                break;
             case "d20":
-                coreUtils.sendMessage(event.getChannel(), "d20 Received");
+                for (int x = 0; x <= Integer.parseInt(args.get(0))-1; x++) {
+                    coreUtils.sendMessage(event.getChannel(), "```" +
+                            event.getAuthor().getDisplayName(event.getGuild()) + " rolled a " +
+                            randomService.randomNumber(20) + "```");
+                }
+                break;
             case "d100":
-                coreUtils.sendMessage(event.getChannel(), "d100 Received");
+                for (int x = 0; x <= Integer.parseInt(args.get(0))-1; x++) {
+                    coreUtils.sendMessage(event.getChannel(), "```" +
+                            event.getAuthor().getDisplayName(event.getGuild()) + " rolled a " +
+                            randomService.randomNumber(100) + "```");
+                }
+                break;
+            default:
+                coreUtils.sendMessage(event.getChannel(), "Improper Dice Type!");
+                break;
         }
-        coreUtils.sendMessage(event.getChannel(), "Improper Dice Type!");
     }
 }

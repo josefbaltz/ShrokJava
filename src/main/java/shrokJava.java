@@ -2,7 +2,8 @@ import sx.blah.discord.api.IDiscordClient;
 import commandPackages.*;
 
 public class shrokJava {
-    public static void main(String[] args){
+    public static void main(String[] args) {
+
         IDiscordClient bot = coreUtils.getBuiltDiscordClient();
 
         bot.getDispatcher().registerListener(new diceRollHandler());
