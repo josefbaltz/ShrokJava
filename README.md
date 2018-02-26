@@ -1,2 +1,2 @@
 # ShrokJava
-Shrok Rewritten in Java 8
+ShrokBot Rewritten in Java 8
