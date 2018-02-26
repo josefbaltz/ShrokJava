@@ -1,0 +1,21 @@
+group 'me.orangeflare.shrok'
+version '1.0.0.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    jcenter() //This prevents issues with transitive dependencies
+    maven {
+        url  "https://jitpack.io"
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile "com.github.austinv11:Discord4J:2.9.3"
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
+}
+
