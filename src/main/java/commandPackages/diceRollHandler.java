@@ -7,6 +7,7 @@ import sx.blah.discord.util.RequestBuffer;
 import java.util.*;
 
 //TODO Allow any type of dice
+//TODO Allow maximum of 20 dice to be rolled
 
 public class diceRollHandler {
     @EventSubscriber
@@ -30,10 +31,10 @@ public class diceRollHandler {
     private void rollInit(MessageReceivedEvent event, List<String> args) {
         if (args.isEmpty() || args.size() <=1 ) {
             coreUtils.sendMessage(event.getChannel(), "Not Enough Arguments Received!");
-            coreUtils.sendMessage(event.getChannel(), "    ```" + coreUtils.BOT_PREFIX + "roll {rolls 1-4} {dice}```");
+            coreUtils.sendMessage(event.getChannel(), "    ```" + coreUtils.BOT_PREFIX + "roll {rolls 1-10} {dice}```");
         } else if (args.size() >= 3) {
             coreUtils.sendMessage(event.getChannel(), "Too Many Arguments Received!");
-            coreUtils.sendMessage(event.getChannel(), "    ```" + coreUtils.BOT_PREFIX + "roll {rolls 1-4} {dice}```");
+            coreUtils.sendMessage(event.getChannel(), "    ```" + coreUtils.BOT_PREFIX + "roll {rolls 1-10} {dice}```");
 
         } else if (args.get(0).equals("1")){
             RequestBuffer.request(() -> {
@@ -55,9 +56,41 @@ public class diceRollHandler {
                 dieCall(4, args, event);
             });
 
-        } else if (!args.get(0).equals("1") && !args.get(0).equals("2") && !args.get(0).equals("3") && !args.get(0).equals("4")){
+        } else if (args.get(0).equals("5")){
+            RequestBuffer.request(() -> {
+                dieCall(5, args, event);
+            });
+
+        } else if (args.get(0).equals("6")){
+            RequestBuffer.request(() -> {
+                dieCall(6, args, event);
+            });
+
+        } else if (args.get(0).equals("7")){
+            RequestBuffer.request(() -> {
+                dieCall(7, args, event);
+            });
+
+        } else if (args.get(0).equals("8")){
+            RequestBuffer.request(() -> {
+                dieCall(8, args, event);
+            });
+
+        } else if (args.get(0).equals("9")){
+            RequestBuffer.request(() -> {
+                dieCall(9, args, event);
+            });
+
+        } else if (args.get(0).equals("10")){
+            RequestBuffer.request(() -> {
+                dieCall(10, args, event);
+            });
+
+        } else if (!args.get(0).equals("1") && !args.get(0).equals("2") && !args.get(0).equals("3") && !args.get(0).equals("4") &&
+                !args.get(0).equals("5") && !args.get(0).equals("6") && !args.get(0).equals("7") && !args.get(0).equals("8") &&
+                !args.get(0).equals("9") && !args.get(0).equals("10")){
             coreUtils.sendMessage(event.getChannel(), "Roll Count Error!");
-            coreUtils.sendMessage(event.getChannel(), "    ```Maximum is 4 AND Must be a Number```");
+            coreUtils.sendMessage(event.getChannel(), "    ```Maximum is 10 AND Must be a Number```");
         } else { coreUtils.sendMessage(event.getChannel(), "```Unknown Error```"); }
     }
     private void dieCall(int i, List<String> args, MessageReceivedEvent event){
@@ -118,6 +151,8 @@ public class diceRollHandler {
                             randomService.randomNumber(100) + "```");
                 }
                 break;
+            case "d1":
+                coreUtils.sendMessage(event.getChannel(), "no");
             default:
                 coreUtils.sendMessage(event.getChannel(), "Improper Dice Type!");
                 break;
