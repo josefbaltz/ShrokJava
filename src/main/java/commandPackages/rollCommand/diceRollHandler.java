@@ -34,6 +34,7 @@ public class diceRollHandler {
                 rollInit(event, argsList);
                 System.out.println("[INFO] roll command received");
                 System.out.println("    Command sent by " + event.getAuthor().getDisplayName(event.getGuild()));
+                break;
         }
     }
     private void rollInit(MessageReceivedEvent event, List<String> args) {

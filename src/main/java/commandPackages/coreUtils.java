@@ -41,7 +41,7 @@ public class coreUtils {
         RequestBuffer.request(() -> {
             try {
                 channel.sendMessage(builder.build());
-            } catch (DiscordException error){
+            } catch (DiscordException error) {
                 System.err.println("[ERROR] Message Failed to send: ");
                 error.printStackTrace();
             }
@@ -68,6 +68,7 @@ public class coreUtils {
     private void helpCommand(List<String> args, MessageReceivedEvent event){
         if (args.isEmpty() || args.size() >= 2) {
             sendHelp(event.getChannel(), "]help {Command}", "]help roll");
+            sendMessage(event.getChannel(), "Avaliable Commands: ```help, roll, cswep```");
         } else {
             switch (args.get(0).toLowerCase()) {
                 case "roll": {
@@ -76,6 +77,10 @@ public class coreUtils {
                 }
                 case "help": {
                     sendHelp(event.getChannel(), "]help {Command}", "]help roll");
+                    break;
+                }
+                case "cswep": {
+                    sendHelp(event.getChannel(), "]cswep {Weapon}", "]cswep awp");
                     break;
                 }
                 default: {
