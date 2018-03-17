@@ -49,7 +49,7 @@ public class csgoWeapons {
         if (args.isEmpty() || args.size() == 0) {
             sendMessage(event.getChannel(), "```deserteagle, r8revolver, dualberettas, fiveseven, glock18, " +
                     "p2000, usps, p250, cz75auto, tec9, mag7, nova, sawedoff, xm1014, ppbizon, mac10, mp7, mp9, " +
-                    "p90, ump45, ak46, aug, famas, falilar, m4a4, m4a1s, sg553, m249, negev, awp, g3sg1, scar20, " +
+                    "p90, ump45, ak47, aug, famas, galilar, m4a4, m4a1s, sg553, m249, negev, awp, g3sg1, scar20, " +
                     "ssg08```");
         } else if (args.size() != 1) {
             sendHelp(event.getChannel(), "]cswep {Weapon}", "]cswep awp");
