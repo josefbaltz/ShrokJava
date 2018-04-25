@@ -64,6 +64,7 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "97.50%", true);
                     builder.appendField("Firerate", "41.24", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
                     break;
                 }
@@ -76,6 +77,7 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "82.50%", true);
                     builder.appendField("Firerate", "240", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(251,176,43);
                     sendEmbed(event.getChannel(), builder);
                     break;
                 }
@@ -88,8 +90,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "82.50%", true);
                     builder.appendField("Firerate", "240", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "ssg08": {
@@ -101,8 +103,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "85.00%", true);
                     builder.appendField("Firerate", "48.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "ak47": {
@@ -114,8 +116,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "77.50%", true);
                     builder.appendField("Firerate", "600.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(251,176,43);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "aug": {
@@ -127,8 +129,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "90.00%", true);
                     builder.appendField("Firerate", "666.67", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "famas": {
@@ -140,8 +142,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "70.00%", true);
                     builder.appendField("Firerate", "666.67", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "galil": {
@@ -153,8 +155,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "77.50%", true);
                     builder.appendField("Firerate", "666.67", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(251,176,43);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "m4a4": {
@@ -166,8 +168,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "70.00%", true);
                     builder.appendField("Firerate", "666.67", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "m4a1s": {
@@ -179,8 +181,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "70.00%", true);
                     builder.appendField("Firerate", "600", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "sg553": {
@@ -192,8 +194,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "100.00%", true);
                     builder.appendField("Firerate", "666.67", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(251,176,43);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "m249": {
@@ -205,8 +207,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "80.00%", true);
                     builder.appendField("Firerate", "750.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "negev": {
@@ -218,8 +220,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "75.00%", true);
                     builder.appendField("Firerate", "800.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "ppbizon": {
@@ -231,8 +233,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "57.50%", true);
                     builder.appendField("Firerate", "750", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "mac10": {
@@ -244,8 +246,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "57.50%", true);
                     builder.appendField("Firerate", "800.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(251,176,43);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "mp7": {
@@ -257,8 +259,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "62.50%", true);
                     builder.appendField("Firerate", "750.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "mp9": {
@@ -270,8 +272,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "60.00%", true);
                     builder.appendField("Firerate", "857.14", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "p90": {
@@ -283,8 +285,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "69.00%", true);
                     builder.appendField("Firerate", "857.14", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "ump45": {
@@ -296,8 +298,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "65.00%", true);
                     builder.appendField("Firerate", "666.67", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "xm1014": {
@@ -310,8 +312,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "80.00%", true);
                     builder.appendField("Firerate", "171.43", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "sawedoff": {
@@ -324,8 +326,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "75.00%", true);
                     builder.appendField("Firerate", "70.59", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(251,176,43);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "nova": {
@@ -338,8 +340,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "50.00%", true);
                     builder.appendField("Firerate", "68.18", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "mag7": {
@@ -352,8 +354,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "75.00%", true);
                     builder.appendField("Firerate", "70.59", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "tec9": {
@@ -365,8 +367,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "90.60%", true);
                     builder.appendField("Firerate", "500.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(251,176,43);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "cz75auto": {
@@ -378,8 +380,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "77.65%", true);
                     builder.appendField("Firerate", "600.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "p250": {
@@ -391,8 +393,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "64.00%", true);
                     builder.appendField("Firerate", "400.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "usps": {
@@ -404,8 +406,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "50.50%", true);
                     builder.appendField("Firerate", "352.94", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "p2000": {
@@ -417,8 +419,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "50.50%", true);
                     builder.appendField("Firerate", "352.94", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "glock18": {
@@ -430,8 +432,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "47.00%", true);
                     builder.appendField("Firerate", "400.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(251,176,43);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "fiveseven": {
@@ -443,8 +445,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "91.15%", true);
                     builder.appendField("Firerate", "400.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(93,201,201);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "dualberettas": {
@@ -456,8 +458,8 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "57.50%", true);
                     builder.appendField("Firerate", "500.00", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "r8revolver": {
@@ -470,8 +472,8 @@ public class csgoWeapons {
                     builder.appendField("Firerate", "120", true);
                     builder.appendField("Firerate (Rapid Fire)", "150", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 case "deserteagle": {
@@ -483,12 +485,17 @@ public class csgoWeapons {
                     builder.appendField("Armor Penetration", "93.20%", true);
                     builder.appendField("Firerate", "266.67", true);
                     builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(174,200,223);
                     sendEmbed(event.getChannel(), builder);
-                    
                     break;
                 }
                 default: {
-                    sendMessage(event.getChannel(), "Invalid Weapon Type!");
+                    //sendMessage(event.getChannel(), "```Invalid Weapon Type!```");
+                    builder.withTitle("CS:GO Weapon");
+                    builder.appendField("ERROR", "Unknown Weapon", true);
+                    builder.withFooterText("ShrokBot (c) 2018");
+                    builder.withColor(255,0,0);
+                    sendEmbed(event.getChannel(), builder);
                 }
             }
         }
