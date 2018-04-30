@@ -14,9 +14,10 @@ import java.util.Arrays;
 import java.util.List;
 
 public class coreUtils {
-    public static String BOT_TOKEN = "MzYxNjQyNzIxNzc5MTIyMTg3.DKnQvA.8CbY3sHLZc178ew7UzQUC8PHTgs";
+    //public static String BOT_TOKEN = "MzYxNjQyNzIxNzc5MTIyMTg3.DKnQvA.8CbY3sHLZc178ew7UzQUC8PHTgs";
+    // THIS BOT TOKEN HAS BEEN DEACTIVATED DUE TO SECURITY ISSUES PLEASE ADD API TOKEN TO STARTUP SCRIPT NOW
     public static String BOT_PREFIX = "]";
-    public static IDiscordClient getBuiltDiscordClient(){
+    public static IDiscordClient getBuiltDiscordClient(String BOT_TOKEN){
         return new ClientBuilder()
                 .withToken(BOT_TOKEN)
                 .build();

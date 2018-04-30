@@ -1,5 +1,6 @@
 group 'me.orangeflare.shrok'
-version '1.0.0.0'
+version '1.2.0.3'
+
 
 apply plugin: 'java'
 
@@ -15,12 +16,12 @@ repositories {
 
 dependencies {
     compile group: 'junit', name: 'junit', version: '4.12'
-    compile "com.github.austinv11:Discord4J:2.9.3"
+    compile "com.discord4j:Discord4J:2.10.1"
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
     compile 'org.apache.httpcomponents:httpclient:4.5.3'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    testCompile "com.github.austinv11:Discord4J:2.9.3"
+    testCompile "com.discord4j:Discord4J:2.10.1"
     testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
     testCompile 'org.apache.httpcomponents:httpclient:4.5.3'
 }
