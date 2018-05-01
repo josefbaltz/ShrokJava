@@ -15,7 +15,9 @@ import java.util.List;
 
 public class coreUtils {
     //public static String BOT_TOKEN = "MzYxNjQyNzIxNzc5MTIyMTg3.DKnQvA.8CbY3sHLZc178ew7UzQUC8PHTgs";
-    // THIS BOT TOKEN HAS BEEN DEACTIVATED DUE TO SECURITY ISSUES PLEASE ADD API TOKEN TO STARTUP SCRIPT NOW
+    // THIS API TOKEN WILL BE REVOKED DUE TO SECURITY ISSUE
+    // YOU MUST SUPPLY TOKEN WHEN STARTING BOT
+    // Example: "java -jar shrokbot.jar TokenHere"
     public static String BOT_PREFIX = "]";
     public static IDiscordClient getBuiltDiscordClient(String BOT_TOKEN){
         return new ClientBuilder()

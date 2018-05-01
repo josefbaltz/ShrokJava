@@ -3,6 +3,9 @@ package commandPackages.rollCommand;
 import commandPackages.coreUtils;
 import sx.blah.discord.api.events.EventSubscriber;
 import sx.blah.discord.handle.impl.events.guild.channel.message.MessageReceivedEvent;
+import sx.blah.discord.util.DiscordException;
+import sx.blah.discord.util.EmbedBuilder;
+import sx.blah.discord.util.RequestBuffer;
 
 import java.util.*;
 
@@ -10,7 +13,7 @@ import static commandPackages.coreUtils.sendHelp;
 
 public class diceRollHandler {
     @EventSubscriber
-    public void onMessageReceived(MessageReceivedEvent event) throws IllegalArgumentException, IndexOutOfBoundsException{
+    public void onMessageReceived(MessageReceivedEvent event) throws IllegalArgumentException, IndexOutOfBoundsException, InterruptedException {
         String[] argArray = event.getMessage().getContent().split(" ");
         if (argArray.length == 0)
             return;
@@ -37,7 +40,7 @@ public class diceRollHandler {
                 break;
         }
     }
-    private void rollInit(MessageReceivedEvent event, List<String> args) {
+    private void rollInit(MessageReceivedEvent event, List<String> args) throws InterruptedException {
         if (args.isEmpty() || args.size() <=1 || args.size() >= 3 || Integer.parseInt(args.get(0)) >= 6 ||
                 Integer.parseInt(args.get(0)) <= 0) {
             sendHelp(event.getChannel(), "]roll {1-5} d{Dice Type}", "]roll 5 d20");
@@ -45,12 +48,22 @@ public class diceRollHandler {
                 dieCall(Integer.parseInt(args.get(0)), args, event);
         }
     }
-    private void dieCall(int i, List<String> args, MessageReceivedEvent event) {
+    private void dieCall(int i, List<String> args, MessageReceivedEvent event) throws InterruptedException {
+        EmbedBuilder builder = new EmbedBuilder();
+        builder.withTitle(event.getAuthor().getDisplayName(event.getGuild()) + " Roll Results");
+        builder.withColor(20, 60, 255);
         for (int x = 0; x <= Integer.parseInt(args.get(0)) - 1; x++) {
             int dieSize = Integer.parseInt(args.get(1).substring(1));
-            coreUtils.sendMessage(event.getChannel(), "```" +
-                    event.getAuthor().getDisplayName(event.getGuild()) + " rolled a " +
-                    randomService.randomNumber(dieSize, event) + "```");
+            builder.appendField("Roll", Integer.toString(randomService.randomNumber(dieSize, event)), true);
         }
+        builder.withFooterText("ShrokBot (c) 2018");
+        RequestBuffer.request(() -> {
+            try {
+                event.getChannel().sendMessage(builder.build());
+            } catch (DiscordException error) {
+                System.err.println("[ERROR] Message Failed to send: ");
+                error.printStackTrace();
+            }
+        });
     }
 }

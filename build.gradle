@@ -1,5 +1,5 @@
 group 'me.orangeflare.shrok'
-version '1.2.0.3'
+version '1.2.1.3'
 
 
 apply plugin: 'java'
